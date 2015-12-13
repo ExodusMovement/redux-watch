@@ -1,0 +1,30 @@
+{
+  "name": "redux-watch",
+  "version": "0.0.0",
+  "description": "Watch Redux state for changes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jprichardson/redux-watch.git"
+  },
+  "keywords": [
+    "redux",
+    "watch",
+    "observe",
+    "monitor",
+    "notify",
+    "state",
+    "observer",
+    "watcher",
+    "react"
+  ],
+  "author": "JP Richardson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jprichardson/redux-watch/issues"
+  },
+  "homepage": "https://github.com/jprichardson/redux-watch#readme"
+}
