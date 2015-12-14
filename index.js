@@ -11,7 +11,7 @@ function watch (getState, objectPath, compare) {
     return function () {
       var newVal = getValue(getState(), objectPath)
       if (compare(baseVal, newVal)) return
-      fn(newVal, baseVal)
+      fn(newVal, baseVal, objectPath)
       baseVal = newVal
     }
   }

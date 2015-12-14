@@ -24,11 +24,13 @@ test('simple path observer', function (t) {
     reducerUpdate: (state, payload) => ({ person: { name: payload } })
   })
 
-  let w = watch(() => store.getState(), ['person', 'name'])
+  let op = ['person', 'name']
+  let w = watch(store.getState, op)
 
-  store.subscribe(w((newVal, oldVal) => {
+  store.subscribe(w((newVal, oldVal, objectPath) => {
     t.is(newVal, 'joe')
     t.is(oldVal, 'jp')
+    t.is(objectPath, op, 'object paths are the same')
     t.end()
   }))
 

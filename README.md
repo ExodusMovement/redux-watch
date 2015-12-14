@@ -40,17 +40,21 @@ equal comparison (`===`). Could use [npm/deep-equal](https://www.npmjs.com/packa
 **Example (basic):**
 
 ```js
-// ... other imports requires
-// ...
+// ... other imports/requires
 import watch from 'redux-watch'
 
+// assuming you have an admin reducer / state slice
+console.log(store.getState().admin.name) // 'JP'
+
 // store is THE redux store
-// assuming you have an admin reducer
 let w = watch(store.getState, 'admin.name')
-store.subscribe(w((newVal, oldVal) => {
-  console.log(newval)
-  console.log(oldVal)
+store.subscribe(w((newVal, oldVal, objectPath) => {
+  console.log('%s changed from %s to %s', objectPath, oldVal, newVal)
+  // admin.name changed from JP to JOE
 }))
+
+// somewhere else, admin reducer handles ADMIN_UPDATE
+store.dispatch({ type: 'ADMIN_UPDATE', payload: { name: 'JOE' }})
 ```
 
 **Example (w/ [reselect](https://github.com/rackt/reselect) selectors):**
@@ -60,7 +64,6 @@ Most times the selectors will handle this for you.
 
 ```js
 // ... other imports requires
-// ...
 import watch from 'redux-watch'
 
 // assuming mySelector is a reselect selector defined somewhere
