@@ -47,7 +47,7 @@ import watch from 'redux-watch'
 // store is THE redux store
 // assuming you have an admin reducer
 let w = watch(store.getState, 'admin.name')
-store.subscribe(w(function(newVal, oldVal) {
+store.subscribe(w((newVal, oldVal) => {
   console.log(newval)
   console.log(oldVal)
 }))
@@ -65,7 +65,7 @@ import watch from 'redux-watch'
 
 // assuming mySelector is a reselect selector defined somewhere
 let w = watch(() => mySelector(store.getState()))
-store.subscribe(w(function(newVal, oldVal) {
+store.subscribe(w((newVal, oldVal) => {
   console.log(newval)
   console.log(oldVal)
 }))
