@@ -1,6 +1,6 @@
 {
   "name": "redux-watch",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Watch Redux state for changes.",
   "main": "index.js",
   "scripts": {
