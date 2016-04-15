@@ -1,3 +1,4 @@
+'use strict'
 var getValue = require('object-path').get
 
 function defaultCompare (a, b) {
@@ -6,13 +7,15 @@ function defaultCompare (a, b) {
 
 function watch (getState, objectPath, compare) {
   compare = compare || defaultCompare
-  var baseVal = getValue(getState(), objectPath)
+  var currentValue = getValue(getState(), objectPath)
   return function w (fn) {
     return function () {
-      var newVal = getValue(getState(), objectPath)
-      if (compare(baseVal, newVal)) return
-      fn(newVal, baseVal, objectPath)
-      baseVal = newVal
+      var newValue = getValue(getState(), objectPath)
+      if (!compare(currentValue, newValue)) {
+        var oldValue = currentValue
+        currentValue = newValue
+        fn(newValue, oldValue, objectPath)
+      }
     }
   }
 }

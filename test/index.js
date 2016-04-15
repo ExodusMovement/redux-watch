@@ -99,3 +99,23 @@ test('array observer (concatted)', function (t) {
 
   store.update({ name: 'steve' })
 })
+
+test('prevent endless recursion', function (t) {
+  var store = setup(
+    { answer: null },
+    function (state, payload) {
+      return { answer: payload }
+    }
+  )
+
+  var w = watch(store.getState, 'answer')
+
+  t.plan(2)
+  store.subscribe(w(function (newVal, oldVal) {
+    store.update(42)
+    t.same(newVal, 42)
+    t.same(oldVal, null)
+  }))
+
+  store.update(42)
+})
