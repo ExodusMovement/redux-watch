@@ -30,15 +30,15 @@
   "scripts": {
     "lint": "standard",
     "test": "npm run lint && npm run unit",
-    "unit": "ava test/*.js"
+    "unit": "tape test/*.js"
   },
   "dependencies": {
     "object-path": "^0.9.2"
   },
   "devDependencies": {
-    "ava": "^0.7.0",
     "redux": "^3.0.5",
     "reselect": "^2.0.1",
-    "standard": "^6.0.8"
+    "standard": "^6.0.8",
+    "tape": "^4.5.1"
   }
 }
