@@ -59,7 +59,7 @@ import watch from 'redux-watch'
 // assuming mySelector is a reselect selector defined somewhere
 let w = watch(() => mySelector(store.getState()))
 store.subscribe(w((newVal, oldVal) => {
-  console.log(newval)
+  console.log(newVal)
   console.log(oldVal)
 }))
 ```
