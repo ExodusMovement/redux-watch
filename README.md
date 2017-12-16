@@ -23,7 +23,7 @@ npm i --save redux-watch
 `watch(getState [, objectPath [, comparison]])` -> `function`
 
 - `getState`: A `function` that is used to return the state. Also useful in conjunction with selectors.
-- `objectPath`: An **optional** `string` or `Array` that represents the path in an object. Uses [object-path](https://www.npmjs.com/package/object-path) ([mariocasciaro/object-path](https://github.com/mariocasciaro/object-path)) for value extraction.
+- `objectPath`: An **optional** `string` or `Array` that represents the path in an object. Uses [dlv](https://www.npmjs.com/package/dlv) ([developit/dlv](https://github.com/developit/dlv)) for value extraction.
 - `comparison`: An **optional** function to pass for comparison of the fields. Defaults to strict equal comparison (`===`).
 
 ## Example
