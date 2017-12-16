@@ -33,7 +33,7 @@
     "unit": "tape test/*.js | tap-spec"
   },
   "dependencies": {
-    "object-path": "^0.9.2"
+    "dlv": "^1.1.1"
   },
   "devDependencies": {
     "redux": "^3.0.5",

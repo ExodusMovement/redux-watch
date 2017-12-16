@@ -1,8 +1,12 @@
 'use strict'
-var getValue = require('object-path').get
+var dlv = require('dlv')
 
 function defaultCompare (a, b) {
   return a === b
+}
+
+function getValue (state, objectPath) {
+  return objectPath ? dlv(state, objectPath) : state
 }
 
 function watch (getState, objectPath, compare) {
