@@ -1,3 +1,8 @@
+2020-20-21 / 1.2.0
+------------------
+- chore: update object-path `^0.9.2` to `^0.11.5`: [#15](https://github.com/ExodusMovement/redux-watch/pull/15) \
+  Non-own properties are not reachable via `objectPath` argument now.
+
 2016-05-03 / 1.1.1
 ------------------
 - bug fix: infinite loop: [#4][#4]
