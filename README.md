@@ -68,7 +68,7 @@ store.subscribe(w((newVal, oldVal) => {
 
 By default, `redux-watch` uses `===` (strict equal) operator to check for changes. This may not be want you want. Sometimes you may want to do a deep inspection. You should use either [deep-equal](https://www.npmjs.com/package/deep-equal) ([substack/node-deep-equal](https://github.com/substack/node-deep-equal)) or [is-equal](https://www.npmjs.com/package/is-equal) ([ljharb/is-equal](https://github.com/ljharb/is-equal)). `is-equal` is better since it supports ES6 types like Maps/Sets.
 
-##### deep equal example
+##### is-equal example
 
 ```js
 import isEqual from 'is-equal'
