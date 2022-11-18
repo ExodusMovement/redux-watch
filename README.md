@@ -1,7 +1,7 @@
 # redux-watch
 
 [![NPM Package](https://img.shields.io/npm/v/redux-watch.svg?style=flat-square)](https://www.npmjs.org/package/redux-watch)
-[![Build Status](https://img.shields.io/travis/jprichardson/redux-watch.svg?branch=master&style=flat-square)](https://travis-ci.org/jprichardson/redux-watch)
+[![Build Status](https://img.shields.io/github/workflow/status/ExodusMovement/redux-watch/Node.js%20CI/master?style=flat-square)](https://github.com/ExodusMovement/redux-watch/actions/workflows/ci.yml?query=branch%3Amaster)
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
