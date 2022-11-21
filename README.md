@@ -83,5 +83,3 @@ store.subscribe(w((newVal, oldVal, objectPath) => {
 ## License
 
 MIT
-
-Copyright (c) [JP Richardson](https://github.com/jprichardson)

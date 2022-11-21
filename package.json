@@ -13,19 +13,19 @@
     "watcher",
     "react"
   ],
-  "homepage": "https://github.com/jprichardson/redux-watch#readme",
+  "homepage": "https://github.com/ExodusMovement/redux-watch#readme",
   "bugs": {
-    "url": "https://github.com/jprichardson/redux-watch/issues"
+    "url": "https://github.com/ExodusMovement/redux-watch/issues"
   },
   "license": "MIT",
-  "author": "JP Richardson",
+  "author": "Exodus Movement, Inc.",
   "files": [
     "index.js"
   ],
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jprichardson/redux-watch.git"
+    "url": "https://github.com/ExodusMovement/redux-watch.git"
   },
   "scripts": {
     "lint": "standard",
